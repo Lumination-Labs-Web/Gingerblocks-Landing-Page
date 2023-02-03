@@ -2,8 +2,10 @@ import { ReactNode } from 'react';
 
 type IHeroOneButtonProps = {
   title: ReactNode;
-  description: string;
+  description: ReactNode | string;
+  callout?: ReactNode | string;
   button: ReactNode;
+  input: ReactNode;
 };
 
 const HeroOneButton = (props: IHeroOneButtonProps) => (
@@ -13,7 +15,12 @@ const HeroOneButton = (props: IHeroOneButtonProps) => (
     </h1>
     <div className="text-2xl mt-4 mb-16">{props.description}</div>
 
-    {props.button}
+    <div className="text-xl mb-1 font-bold">{props.callout}</div>
+
+    <div className="flex flex-row flex-wrap gap-1 justify-center mb-4 h-[4rem]">
+      {props.input}
+      {props.button}
+    </div>
   </header>
 );
 

@@ -2,6 +2,9 @@ import className from 'classnames';
 
 type IButtonProps = {
   xl?: boolean;
+  hFull?: boolean;
+  nudgeLeft?: boolean;
+  submit?: boolean;
   children: string;
 };
 
@@ -11,16 +14,18 @@ const Button = (props: IButtonProps) => {
     'btn-xl': props.xl,
     'btn-base': !props.xl,
     'btn-primary': true,
+    'h-full': props.hFull,
+    'sm:-translate-x-3': props.nudgeLeft,
   });
 
   return (
-    <div className={btnClass}>
+    <button className={btnClass} type={props.submit ? 'submit' : undefined}>
       {props.children}
 
       <style jsx>
         {`
           .btn {
-            @apply inline-block rounded-md text-center;
+            @apply inline-block rounded-md text-center flex flex-col justify-center;
           }
 
           .btn-base {
@@ -40,7 +45,7 @@ const Button = (props: IButtonProps) => {
           }
         `}
       </style>
-    </div>
+    </button>
   );
 };
 
