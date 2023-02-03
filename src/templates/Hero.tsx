@@ -34,6 +34,7 @@ const Hero = () => (
             <Input
               id="notify"
               type="email"
+              name="email"
               placeholder="Your email address"
               inputClass="sm:w-1/3 h-full"
             />
