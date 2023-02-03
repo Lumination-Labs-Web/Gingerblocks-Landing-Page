@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Background } from '../background/Background';
 import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
@@ -41,13 +39,9 @@ const Hero = () => (
             />
           }
           button={
-            <Link href="#">
-              <a>
-                <Button xl hFull nudgeLeft submit>
-                  Notify Me
-                </Button>
-              </a>
-            </Link>
+            <Button xl hFull nudgeLeft submit>
+              Notify Me
+            </Button>
           }
         />
         <div data-netlify-recaptcha="true"></div>
