@@ -9,7 +9,7 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head />
         <body>
-          <form
+          {/* <form
             name="early-access"
             data-netlify="true"
             netlify-honeypot="name"
@@ -18,7 +18,7 @@ class MyDocument extends Document {
           >
             <input type="text" name="name" />
             <input type="email" name="email" />
-          </form>
+          </form> */}
           <Main />
           <NextScript />
         </body>
