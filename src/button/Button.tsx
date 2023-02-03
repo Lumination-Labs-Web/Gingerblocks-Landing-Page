@@ -6,6 +6,7 @@ type IButtonProps = {
   nudgeLeft?: boolean;
   submit?: boolean;
   children: string;
+  disabled?: boolean;
 };
 
 const Button = (props: IButtonProps) => {
@@ -19,7 +20,11 @@ const Button = (props: IButtonProps) => {
   });
 
   return (
-    <button className={btnClass} type={props.submit ? 'submit' : undefined}>
+    <button
+      className={btnClass}
+      type={props.submit ? 'submit' : undefined}
+      disabled={props.disabled}
+    >
       {props.children}
 
       <style jsx>
@@ -42,6 +47,10 @@ const Button = (props: IButtonProps) => {
 
           .btn-primary:hover {
             @apply bg-primary-600;
+          }
+
+          .btn:disabled {
+            @apply bg-primary-300 cursor-not-allowed;
           }
         `}
       </style>

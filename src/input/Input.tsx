@@ -1,12 +1,21 @@
 type InputProps = {
   inputClass?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   [key: string]: any;
 };
 
-export const Input = ({ inputClass, ...restProps }: InputProps) => {
+export const Input = ({
+  inputClass,
+  value,
+  onChange,
+  ...restProps
+}: InputProps) => {
   return (
     <input
       type="text"
+      value={value}
+      onChange={onChange}
       className={`
           form-control
           block

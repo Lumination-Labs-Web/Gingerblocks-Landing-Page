@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { useRouter } from 'next/router';
 
 import { Background } from '../background/Background';
@@ -12,6 +14,7 @@ const ROBOT_IMAGE = '/assets/images/robot.png';
 
 const Hero = () => {
   const router = useRouter();
+  const [email, setEmail] = useState('');
 
   return (
     <Background color="bg-gray-100">
@@ -56,10 +59,18 @@ const Hero = () => {
                 name="email"
                 placeholder="Your email address"
                 inputClass="sm:w-1/3 h-full"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             }
             button={
-              <Button xl hFull nudgeLeft submit>
+              <Button
+                xl
+                hFull
+                nudgeLeft
+                submit
+                disabled={!(email && email.match(/^[^\s@]+@(\w+\.\w+)+$/))}
+              >
                 Notify Me
               </Button>
             }
