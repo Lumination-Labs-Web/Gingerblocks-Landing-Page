@@ -21,13 +21,8 @@ const Hero = () => (
     </Section>
 
     <Section yPadding="pt-18 pb-32">
-      <form
-        name="early-access"
-        method="POST"
-        data-netlify="true"
-        netlify-honeypot="name"
-        data-netlify-recaptcha="true"
-      >
+      <form name="early-access" method="post">
+        <input type="hidden" name="form-name" value="early-access" />
         <span className="invisible">
           <input type="text" name="name" />
         </span>

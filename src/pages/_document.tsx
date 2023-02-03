@@ -9,6 +9,16 @@ class MyDocument extends Document {
       <Html lang={AppConfig.locale}>
         <Head />
         <body>
+          <form
+            name="early-access"
+            data-netlify="true"
+            netlify-honeypot="name"
+            data-netlify-recaptcha="true"
+            hidden
+          >
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+          </form>
           <Main />
           <NextScript />
         </body>
