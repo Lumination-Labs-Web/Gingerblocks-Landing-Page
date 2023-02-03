@@ -19,12 +19,7 @@ const Hero = () => (
     </Section>
 
     <Section yPadding="pt-18 pb-32">
-      <form
-        name="early-access"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-      >
+      <form name="early-access" method="POST" data-netlify="true">
         <input type="hidden" name="form-name" value="early-access" />
         <HeroOneButton
           title={
@@ -47,7 +42,7 @@ const Hero = () => (
             </Button>
           }
         />
-        <div data-netlify-recaptcha="true"></div>
+        {/* <div data-netlify-recaptcha="true"></div> */}
       </form>
     </Section>
   </Background>
