@@ -10,7 +10,7 @@ import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
-const ROBOT_IMAGE = '/assets/images/robot.png';
+const ROBOT_IMAGE = '/assets/images/robot2.png';
 
 const Hero = () => {
   const router = useRouter();
