@@ -48,9 +48,11 @@ const Hero = () => {
           </div>
           <HeroOneButton
             title={
-              <span className="text-primary-500">Create the best stories.</span>
+              <span className="text-primary-500">
+                Create and discover the best stories.
+              </span>
             }
-            description="Take storytime to the next level with AI-assisted storytelling."
+            description="Supercharge your creativity with AI-assisted storybuilding."
             callout="Get early access to Gingerblocks:"
             input={
               <Input

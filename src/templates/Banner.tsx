@@ -7,8 +7,8 @@ import { Section } from '../layout/Section';
 const Banner = () => (
   <Section>
     <CTABanner
-      title="Encourage reading and creativity."
-      subtitle="Get the app and start creating stories with your kids."
+      title="Join the Gingerblocks storyverse."
+      subtitle="Start creating and sharing your stories."
       button={
         <Link href="#notify">
           <a>
