@@ -47,7 +47,7 @@ const Hero = () => {
             <div className={`flex flex-column justify-center`}>
               <img
                 src={`${router.basePath}${ROBOT_IMAGE}`}
-                className="sm:w-1/4 rounded-lg"
+                className="w-full sm:w-1/3 px-4 rounded-lg"
                 alt="Robot"
               />
             </div>
